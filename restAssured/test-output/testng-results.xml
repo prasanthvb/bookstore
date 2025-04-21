@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="3" failed="1" skipped="1">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-11T00:24:26 IST" name="Default suite" finished-at="2025-04-11T00:24:29 IST" duration-ms="2774">
+    <groups>
+    </groups>
+    <test started-at="2025-04-11T00:24:26 IST" name="Default test" finished-at="2025-04-11T00:24:29 IST" duration-ms="2774">
+      <class name="com.bookstore.TestCases.BookTestCase">
+        <test-method signature="newSignup()[pri:1, instance:com.bookstore.TestCases.BookTestCase@1a482e36]" started-at="2025-04-11T00:24:26 IST" name="newSignup" finished-at="2025-04-11T00:24:28 IST" duration-ms="1992" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newSignup -->
+        <test-method signature="validLogin()[pri:2, instance:com.bookstore.TestCases.BookTestCase@1a482e36]" started-at="2025-04-11T00:24:28 IST" name="validLogin" finished-at="2025-04-11T00:24:29 IST" duration-ms="704" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method signature="invalidLogin()[pri:3, instance:com.bookstore.TestCases.BookTestCase@1a482e36]" started-at="2025-04-11T00:24:29 IST" name="invalidLogin" finished-at="2025-04-11T00:24:29 IST" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLogin -->
+        <test-method signature="addBook()[pri:4, instance:com.bookstore.TestCases.BookTestCase@1a482e36]" started-at="2025-04-11T00:24:29 IST" name="addBook" finished-at="2025-04-11T00:24:29 IST" depends-on-methods="com.bookstore.TestCases.BookTestCase.validLogin" duration-ms="11" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot get property 'assertionClosure' on null object]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot get property 'assertionClosure' on null object
+at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:92)
+at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:167)
+at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:48)
+at org.codehaus.groovy.runtime.callsite.GetEffectivePogoFieldSite.callGetProperty(GetEffectivePogoFieldSite.java:48)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1702)
+at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:176)
+at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+at com.bookstore.Utils.TestUtil.post(TestUtil.java:46)
+at com.bookstore.TestCases.BookTestCase.addBook(BookTestCase.java:55)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+        <test-method signature="getBookById()[pri:5, instance:com.bookstore.TestCases.BookTestCase@1a482e36]" started-at="2025-04-11T00:24:29 IST" name="getBookById" finished-at="2025-04-11T00:24:29 IST" depends-on-methods="com.bookstore.TestCases.BookTestCase.addBook" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method BookTestCase.getBookById()[pri:5, instance:com.bookstore.TestCases.BookTestCase@1a482e36] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method BookTestCase.getBookById()[pri:5, instance:com.bookstore.TestCases.BookTestCase@1a482e36] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBookById -->
+      </class> <!-- com.bookstore.TestCases.BookTestCase -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
